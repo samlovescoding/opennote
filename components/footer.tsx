@@ -4,7 +4,7 @@ const Footer = () => {
             <div className="container-fluid">
                 <div className="nk-footer-wrap">
                     <div className="nk-footer-copyright">
-                        © 2023 Dashboard. Template by{" "}
+                        © 2023 Open Note. Made by{" "}
                         <a href="https://samlovescoding.com" target="_blank">
                             Sampan Verma
                         </a>

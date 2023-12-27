@@ -1,5 +1,5 @@
 <x-auth.layout>
-    <title>Create New Dashboard Account</title>
+    <title>Open Note is the best free note taking and project management app.</title>
     <div class="nk-app-root">
         <div class="nk-main">
             <div class="nk-wrap nk-wrap-nosidebar">
@@ -19,7 +19,7 @@
                                     <div class="nk-block-head-content">
                                         <h4 class="nk-block-title">Register</h4>
                                         <div class="nk-block-des">
-                                            <p>Create New Dashboard Account</p>
+                                            <p>Create a new Open Note account</p>
                                         </div>
                                     </div>
                                 </div>

@@ -12,7 +12,7 @@ function HabitsPage() {
                     </div>
                     <div className="nk-block-head-content">
                         <a className="btn btn-primary" href="/write">
-                            Start new habit
+                            Create new notification
                         </a>
                     </div>
                 </div>

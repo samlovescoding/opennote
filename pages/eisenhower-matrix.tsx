@@ -10,11 +10,7 @@ function EisenhowerMatrixPage() {
                             Eisenhower Matrix
                         </h3>
                     </div>
-                    <div className="nk-block-head-content">
-                        <a className="btn btn-primary" href="/write">
-                            Start new habit
-                        </a>
-                    </div>
+                    <div className="nk-block-head-content"></div>
                 </div>
             </div>
         </Layout>

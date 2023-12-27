@@ -10,7 +10,7 @@ function CalendarPage() {
                     </div>
                     <div className="nk-block-head-content">
                         <a className="btn btn-primary" href="/write">
-                            Start new habit
+                            Start new event
                         </a>
                     </div>
                 </div>

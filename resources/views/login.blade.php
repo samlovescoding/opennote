@@ -1,5 +1,5 @@
 <x-auth.layout>
-    <title>Access the Dashboard panel using your email and password.</title>
+    <title>Open Note is the best free note taking and project management app.</title>
     <div class="nk-app-root">
         <div class="nk-main">
             <div class="nk-wrap nk-wrap-nosidebar">
@@ -19,7 +19,7 @@
                                     <div class="nk-block-head-content">
                                         <h4 class="nk-block-title">Sign-In</h4>
                                         <div class="nk-block-des">
-                                            <p>Access the Dashboard panel using your email and password.</p>
+                                            <p>Access Open Note using your email and password</p>
                                         </div>
                                     </div>
                                 </div>
