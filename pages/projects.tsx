@@ -4,64 +4,55 @@ import { useDisclosure } from "helpers/disclosure";
 function Projects() {
     return (
         <Layout title="Projects">
-            <div className="nk-fmg-body-content">
-                <div className="nk-block-head nk-block-head-sm">
-                    <div className="nk-block-between position-relative">
-                        <div className="nk-block-head-content">
-                            <h3 className="nk-block-title page-title">
-                                Your Projects
-                            </h3>
-                        </div>
-                        <div className="nk-block-head-content">
-                            <a
-                                className="btn btn-primary"
-                                href="/projects/create"
-                            >
-                                Create New Projects
-                            </a>
-                        </div>
+            <div className="nk-block-head nk-block-head-sm">
+                <div className="nk-block-between position-relative">
+                    <div className="nk-block-head-content">
+                        <h3 className="nk-block-title page-title">
+                            Your Projects
+                        </h3>
+                    </div>
+                    <div className="nk-block-head-content">
+                        <a className="btn btn-primary" href="/projects/create">
+                            Create New Projects
+                        </a>
                     </div>
                 </div>
-                <div className="nk-block">
-                    <table className="nk-tb-list is-separate nk-tb-ulist">
-                        <thead>
-                            <tr className="nk-tb-item nk-tb-head">
-                                <th className="nk-tb-col">
-                                    <span className="sub-text">
-                                        Project Name
-                                    </span>
-                                </th>
-                                <th className="nk-tb-col tb-col-xxl">
-                                    <span className="sub-text">Client</span>
-                                </th>
-                                <th className="nk-tb-col tb-col-lg">
-                                    <span className="sub-text">
-                                        Project Lead
-                                    </span>
-                                </th>
-                                <th className="nk-tb-col tb-col-lg">
-                                    <span className="sub-text">Team</span>
-                                </th>
-                                <th className="nk-tb-col tb-col-xxl">
-                                    <span className="sub-text">Status</span>
-                                </th>
-                                <th className="nk-tb-col tb-col-sm">
-                                    <span className="sub-text">
-                                        Sprint Deadline
-                                    </span>
-                                </th>
-                                <th className="nk-tb-col nk-tb-col-tools text-end"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <Project />
-                            <Project />
-                            <Project />
-                            <Project />
-                            <Project />
-                        </tbody>
-                    </table>
-                </div>
+            </div>
+            <div className="nk-block">
+                <table className="nk-tb-list is-separate nk-tb-ulist">
+                    <thead>
+                        <tr className="nk-tb-item nk-tb-head">
+                            <th className="nk-tb-col">
+                                <span className="sub-text">Project Name</span>
+                            </th>
+                            <th className="nk-tb-col tb-col-xxl">
+                                <span className="sub-text">Client</span>
+                            </th>
+                            <th className="nk-tb-col tb-col-lg">
+                                <span className="sub-text">Project Lead</span>
+                            </th>
+                            <th className="nk-tb-col tb-col-lg">
+                                <span className="sub-text">Team</span>
+                            </th>
+                            <th className="nk-tb-col tb-col-xxl">
+                                <span className="sub-text">Status</span>
+                            </th>
+                            <th className="nk-tb-col tb-col-sm">
+                                <span className="sub-text">
+                                    Sprint Deadline
+                                </span>
+                            </th>
+                            <th className="nk-tb-col nk-tb-col-tools text-end"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <Project />
+                        <Project />
+                        <Project />
+                        <Project />
+                        <Project />
+                    </tbody>
+                </table>
             </div>
         </Layout>
     );

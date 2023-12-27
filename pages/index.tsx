@@ -2,6 +2,51 @@ import Icon, { IconType } from "components/icon";
 import Layout from "components/layout";
 import { useDisclosure } from "helpers/disclosure";
 
+function HomePage() {
+    return (
+        <Layout title="Home">
+            <div className="nk-block-head nk-block-head-sm">
+                <div className="nk-block-between position-relative">
+                    <div className="nk-block-head-content">
+                        <h3 className="nk-block-title page-title">
+                            Your Notes
+                        </h3>
+                    </div>
+                    <div className="nk-block-head-content">
+                        <a className="btn btn-primary" href="/write">
+                            Create New Note
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div className="nk-fmg-listing nk-block">
+                <div className="nk-files nk-files-view-list">
+                    <div className="nk-files-list">
+                        <FileItem icon="folder-list" href="/files/ui-design">
+                            UI Design
+                        </FileItem>
+
+                        <FileItem icon="folder-list" href="/files/ux-design">
+                            UX Design
+                        </FileItem>
+
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                        <FileItem href="/files/ux-design">UX Design</FileItem>
+                    </div>
+                </div>
+            </div>
+        </Layout>
+    );
+}
+
 function FileItem({
     icon = "file-text",
     emoji,
@@ -99,77 +144,4 @@ interface FileItemProps {
     children: React.ReactNode;
 }
 
-function Home() {
-    return (
-        <Layout title="Home">
-            <div className="nk-fmg-body-content">
-                <div className="nk-block-head nk-block-head-sm">
-                    <div className="nk-block-between position-relative">
-                        <div className="nk-block-head-content">
-                            <h3 className="nk-block-title page-title">
-                                Your Notes
-                            </h3>
-                        </div>
-                        <div className="nk-block-head-content">
-                            <a className="btn btn-primary" href="/write">
-                                Create New Note
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="nk-fmg-listing nk-block">
-                    <div className="nk-files nk-files-view-list">
-                        <div className="nk-files-list">
-                            <FileItem
-                                icon="folder-list"
-                                href="/files/ui-design"
-                            >
-                                UI Design
-                            </FileItem>
-
-                            <FileItem
-                                icon="folder-list"
-                                href="/files/ux-design"
-                            >
-                                UX Design
-                            </FileItem>
-
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                            <FileItem href="/files/ux-design">
-                                UX Design
-                            </FileItem>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Layout>
-    );
-}
-
-export default Home;
+export default HomePage;

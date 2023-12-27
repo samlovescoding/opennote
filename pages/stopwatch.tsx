@@ -1,6 +1,6 @@
 import Layout from "components/layout";
 
-function Stopwatch() {
+function StopwatchPage() {
     return (
         <Layout title="Stopwatch">
             Design a Pomodoro Timer from https://pomofocus.io/
@@ -8,4 +8,4 @@ function Stopwatch() {
     );
 }
 
-export default Stopwatch;
+export default StopwatchPage;
