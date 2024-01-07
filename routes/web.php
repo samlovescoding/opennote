@@ -6,6 +6,7 @@ use App\Http\Controllers\HabitController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SettingsController;
@@ -30,7 +31,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/logout', [LogoutController::class, 'store']);
 
 Route::middleware("auth")->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name("home");
+    Route::redirect('/', '/notes')->name("home");
+    Route::get('/notes', [NoteController::class, 'index'])->name("notes");
+    Route::get('/notes/create', [NoteController::class, 'create'])->name("notes");
     Route::get('/calendar', [CalendarController::class, 'index'])->name("calendar");
     Route::get('/eisenhower-matrix', [EisenhowerMatrixController::class, 'index'])->name("eisenhower-matrix");
     Route::get('/projects', [ProjectController::class, 'index'])->name("projects");

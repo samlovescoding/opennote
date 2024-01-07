@@ -10,9 +10,9 @@ const sidebarData: Sidebar = [
     {
         id: "link-home",
         type: "link",
-        href: "/",
-        children: "Home",
-        icon: "home",
+        href: "/notes",
+        children: "Notebook",
+        icon: "note-add-fill",
     },
     {
         id: "link-calendar",
@@ -21,13 +21,13 @@ const sidebarData: Sidebar = [
         children: "Calendar",
         icon: "calender-date-fill",
     },
-    {
-        id: "link-eisenhower-matrix",
-        type: "link",
-        href: "/eisenhower-matrix",
-        children: "Eisenhower Matrix",
-        icon: "grid-fill-c",
-    },
+    // {
+    //     id: "link-eisenhower-matrix",
+    //     type: "link",
+    //     href: "/eisenhower-matrix",
+    //     children: "Eisenhower Matrix",
+    //     icon: "grid-fill-c",
+    // },
     {
         id: "link-projects",
         type: "link",

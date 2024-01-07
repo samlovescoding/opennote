@@ -1,8 +1,9 @@
+import { Link } from "@inertiajs/react";
 import Icon, { IconType } from "components/icon";
 import Layout from "components/layout";
 import { useDisclosure } from "helpers/disclosure";
 
-function HomePage() {
+function NotesPage() {
     return (
         <Layout title="Home">
             <div className="nk-block-head nk-block-head-sm">
@@ -13,9 +14,10 @@ function HomePage() {
                         </h3>
                     </div>
                     <div className="nk-block-head-content">
-                        <a className="btn btn-primary" href="/write">
-                            Create New Note
-                        </a>
+                        <Link className="btn btn-primary" href="/notes/create">
+                            <Icon type="plus" />
+                            <span>New Note</span>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -144,4 +146,4 @@ interface FileItemProps {
     children: React.ReactNode;
 }
 
-export default HomePage;
+export default NotesPage;

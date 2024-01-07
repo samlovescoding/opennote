@@ -8,6 +8,7 @@ export function InputElement({
     onChange = () => {},
     hasError = false,
     error = null,
+    vertical = false,
     ...inputProps
 }: InputProps) {
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (
@@ -16,8 +17,8 @@ export function InputElement({
         onChange(event.target.value);
     };
     return (
-        <div className="row g-3 align-center">
-            <div className="col-lg-5">
+        <div className={cx("row align-center", vertical ? "g-0 mb-3" : "g-3")}>
+            <div className={vertical ? "col-lg-12" : "col-lg-5"}>
                 <div className="form-group">
                     <label
                         className={cx("form-label", {
@@ -38,7 +39,7 @@ export function InputElement({
                     )}
                 </div>
             </div>
-            <div className="col-lg-7">
+            <div className={vertical ? "col-lg-12" : "col-lg-7"}>
                 <div className="form-group">
                     <div className="form-control-wrap">
                         <input
@@ -91,6 +92,7 @@ interface InputProps
     onChange?: (newValue: string) => void;
     hasError?: boolean;
     error?: string | null;
+    vertical?: boolean;
 }
 
 export const Input = (inputProps: InputProps) => {

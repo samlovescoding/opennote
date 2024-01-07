@@ -1,40 +1,39 @@
 import Layout from "components/layout";
-import { useMemo } from "react";
-import Scheduler from "components/scheduler";
+import Icon from "components/icon";
+
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 
 function CalendarPage() {
+    const handleNewEvent = () => alert("Add New Event");
     return (
         <Layout title="Home">
-            <div className="nk-block-head nk-block-head-sm">
-                <div className="nk-block-between position-relative">
-                    <div className="nk-block-head-content d-flex gap-2">
-                        <h3 className="nk-block-title page-title">
-                            December 2023
-                        </h3>
-                        <div>
-                            <a
-                                className="btn btn-xs btn-secondary"
-                                href="/write"
-                            >
-                                Previous
-                            </a>
-                            <a
-                                className="btn btn-xs btn-secondary ms-2"
-                                href="/write"
-                            >
-                                Next
-                            </a>
-                        </div>
-                    </div>
-                    <div className="nk-block-head-content">
-                        <a className="btn btn-primary" href="/write">
-                            Start new event
-                        </a>
-                    </div>
+            <div className="card">
+                <div className="card-inner">
+                    <FullCalendar
+                        plugins={[dayGridPlugin, bootstrap5Plugin]}
+                        initialView="dayGridMonth"
+                        headerToolbar={{
+                            start: "title prev,next",
+                            center: "",
+                            end: "newEvent",
+                        }}
+                        buttonText={{
+                            today: "Today",
+                        }}
+                        customButtons={{
+                            newEvent: {
+                                text: "Add Event",
+                                click: handleNewEvent,
+                                icon: "plus",
+                                // themeIcon: "plus",
+                            },
+                        }}
+                        themeSystem="bootstrap5"
+                    />
                 </div>
             </div>
-
-            <Scheduler />
         </Layout>
     );
 }

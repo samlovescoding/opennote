@@ -50,3 +50,28 @@ h6 {
     align-items: center;
     font-size: 24px;
 }
+
+.scheduler {
+    /* display: flex; */
+    width: 100%;
+    height: calc(100vh - 194px);
+}
+.scheduler-head {
+}
+.scheduler-week {
+}
+.scheduler-week-day {
+    /* padding: 40px 20px; */
+    border: 1px solid black;
+    cursor: pointer;
+}
+.scheduler-week-day-empty,
+.scheduler-week-day-1,
+.scheduler-week-day-7 {
+    background: rgba(0, 0, 0, 0.2);
+}
+.scheduler-week-day:not(.scheduler-week-day-empty):not(
+        .scheduler-week-day-1
+    ):not(.scheduler-week-day-7):hover {
+    background: rgba(0, 0, 0, 0.1);
+}

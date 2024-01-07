@@ -34,7 +34,7 @@ const getMonthBreakup = (
     const days = getMonthDays(month, year);
     const previousNullCount = days.at(0).day;
     const lastDay = days.at(-1);
-    const nextNullCount = 6 - lastDay.day + (7 - lastDay.week) * 7;
+    const nextNullCount = 6 - lastDay.day + (6 - lastDay.week) * 7;
     const previousNulls = Array.from(Array(previousNullCount).keys()).map(
         () => null
     );
@@ -58,28 +58,53 @@ const groupByWeeks = (
 function Scheduler() {
     const days = getMonthBreakup(11, 2023);
     const weeks = groupByWeeks(days);
+    console.log({ weeks });
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Sun</th>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
+        <table className="scheduler">
+            <thead className="scheduler-head">
+                <tr className="scheduler-head-days">
+                    <th className="scheduler-head-days-sunday">Sun</th>
+                    <th className="scheduler-head-days-monday">Mon</th>
+                    <th className="scheduler-head-days-tuesday">Tue</th>
+                    <th className="scheduler-head-days-wednesday">Wed</th>
+                    <th className="scheduler-head-days-thursday">Thu</th>
+                    <th className="scheduler-head-days-friday">Fri</th>
+                    <th className="scheduler-head-days-saturday">Sat</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="scheduler-body">
                 {weeks.map((week, weekIndex) => (
-                    <tr>
+                    <tr
+                        key={`scheduler-week-${weekIndex + 1}`}
+                        className={cx(
+                            "scheduler-week",
+                            `scheduler-week-${weekIndex + 1}`
+                        )}
+                    >
                         {week.map((day, dayIndex) => {
+                            const dayKey = `scheduler-week-${
+                                weekIndex + 1
+                            }-day-${dayIndex + 1}`;
                             if (day === null) {
-                                return <td></td>;
+                                return (
+                                    <td
+                                        key={dayKey}
+                                        className="scheduler-week-day scheduler-week-day-empty"
+                                    ></td>
+                                );
                             }
                             return (
-                                <td>
+                                <td
+                                    key={dayKey}
+                                    className={cx(
+                                        "scheduler-week-day",
+                                        `scheduler-week-day-${dayIndex + 1}`,
+                                        `scheduler-week-${weekIndex + 1}-day`,
+                                        `scheduler-week-${weekIndex + 1}-day-${
+                                            dayIndex + 1
+                                        }`
+                                    )}
+                                >
                                     {day.date} - {day.month} - {day.year}
                                 </td>
                             );
